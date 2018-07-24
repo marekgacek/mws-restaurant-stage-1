@@ -1,3 +1,26 @@
+/**
+ * Register the service worker
+ */
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+    .register('./service-worker.js')
+    .then((reg) => {
+      //worked
+    if(reg.installing){
+      console.log('Service worked is installing');
+    }else if(reg.waiting){
+      console.log('Service worker installed successfully');
+    }else if(reg.active){
+      console.log('Service worker active');
+          }
+          console.log('Registration complete. Scope is'+reg.scope);
+    })
+    .catch(error => {
+      //failure
+      console.log('Service Worker failed to register'+error);
+    });
+}
+
 let restaurants,
   neighborhoods,
   cuisines
