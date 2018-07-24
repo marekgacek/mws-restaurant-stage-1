@@ -13,7 +13,7 @@ if ('serviceWorker' in navigator) {
     }else if(reg.active){
       console.log('Service worker active');
           }
-          console.log('Registration complete. Scope is'+reg.scope);
+          console.log('Registration complete. Scope is '+reg.scope);
     })
     .catch(error => {
       //failure
