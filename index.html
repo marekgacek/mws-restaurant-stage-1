@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
@@ -9,27 +9,29 @@
 </head>
 
 <body>
-  <header tabindex="0">
+  <header>
     <nav>
       <h1><a href="/">Restaurant Reviews</a></h1>
     </nav>
   </header>
 
-  <main id="maincontent" tabindex="1">
+  <main id="maincontent" tabindex="-1">
     <section id="map-container">
-      <div id="map"></div>
+      <div id="map" role="application"></div>
     </section>
-    <section tabindex="2">
+    <section>
       <div class="filter-options">
         <h2>Filter Results</h2>
         <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
           <option value="all">All Neighborhoods</option>
         </select>
-        <label for="neighborhoods-select">neighborhoods-select</label>
+        <label for="neighborhoods-select">
         <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
-          <label for="cuisines-select">cuisines-select</label>
+        </label>
+          <label for="cuisines-select">
           <option value="all">All Cuisines</option>
         </select>
+      </label>
       </div>
       <ul id="restaurants-list"></ul>
     </section>
