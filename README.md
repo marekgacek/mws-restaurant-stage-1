@@ -1,32 +1,43 @@
-# Mobile Web Specialist Certification Course
----
-#### _Three Stage Course Material Project - Restaurant Reviews_
+# FEND Restaurant Review App
 
-## Project Overview: Stage 1
+The project 6 of the [FEND with Udacity](https://eu.udacity.com/course/front-end-web-developer-nanodegree--nd001).
 
-For the **Restaurant Reviews** projects, you will incrementally convert a static webpage to a mobile-ready web application. In **Stage One**, you will take a static design that lacks accessibility and convert the design to be responsive on different sized displays and accessible for screen reader use. You will also add a service worker to begin the process of creating a seamless offline experience for your users.
+The main goal is to use service worker to cache the content and the site should have high accessibility.
 
-### Specification
+## Get Started
 
-You have been provided the code for a restaurant reviews website. The code has a lot of issues. It’s barely usable on a desktop browser, much less a mobile device. It also doesn’t include any standard accessibility features, and it doesn’t work offline at all. Your job is to update the code to resolve these issues while still maintaining the included functionality. 
+### For Users
 
-### What do I do from here?
+This is a website where you can search for your favourite restaurant. You can filter your search by location or cuisine type.
 
-1. In this folder, start up a simple HTTP server to serve up the site files on your local computer. Python has some simple tools to do this, and you don't even need to know Python. For most people, it's already installed on your computer. 
+Use the dropdown lists to filter your result. The map is updating when you change restaurant/
 
-In a terminal, check the version of Python you have: `python -V`. If you have Python 2.x, spin up the server with `python -m SimpleHTTPServer 8000` (or some other port, if port 8000 is already in use.) For Python 3.x, you can use `python3 -m http.server 8000`. If you don't have Python installed, navigate to Python's [website](https://www.python.org/) to download and install the software.
+You can see the details of the restaurants by clicking in the "View details of..." link.
 
-2. With your server running, visit the site: `http://localhost:8000`, and look around for a bit to see what the current experience looks like.
-3. Explore the provided code, and start making a plan to implement the required features in three areas: responsive design, accessibility and offline use.
-4. Write code to implement the updates to get this site on its way to being a mobile-ready website.
+
+
+### For Developers
+
+- Clone the repository
+- Go to the cloned folder
+- I recommend using Python with the following command:
+
+**Python 3**
+
+`python -m http.server 8000`
+
+
+- Go to _localhost:8000_ to open the website.
+- The main HTML page is _/index.html_
+- The restaurant's details HTML page is _/restaurant.html_
+- The CSS file is _/css/styles.css_
+- The JS file for the main page is _/js/main.js_
+- The JS file for the restaurant page is _/js/restaurant_info.js_
+- The JS file to fetch the data from the server is _/js/dbhelper.js_
+- The service worker is located in _/service-worker.js_ and registered in the _/js/main.js_ file.
+- The images are located in _/img_
+
 
 ## Leaflet.js and Mapbox:
 
-This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://www.mapbox.com/). You need to replace `<your MAPBOX API KEY HERE>` with a token from [Mapbox](https://www.mapbox.com/). Mapbox is free to use, and does not require any payment information. 
-
-### Note about ES6
-
-Most of the code in this project has been written to the ES6 JavaScript specification for compatibility with modern web browsers and future proofing JavaScript code. As much as possible, try to maintain use of ES6 in any additional JavaScript you write. 
-
-
-
+This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://www.mapbox.com/). You need to replace `<your MAPBOX API KEY HERE>` with a token from [Mapbox](https://www.mapbox.com/). Mapbox is free to use, and does not require any payment information.
